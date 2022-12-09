@@ -16,18 +16,7 @@ https://en.wikipedia.org/wiki/Binary_search_algorithm
 
 
 def tenary_search(in_list: List[int], target: int) -> Optional[int or None]:
-    l_index = 0
-    r_index = len(in_list) - 1
-    while l_index <= r_index:
-        m1_index = l_index + (l_index + r_index) // 3
-        m2_index = r_index - (l_index + r_index) // 3
-        if in_list[m1_index] == target:
-            return m1_index
-        elif in_list[m2_index] == target:
-            return m2_index
-        elif in_list[m1_index] >  target:
     return None
-
 
 if __name__ == "__main__":
     arr = [10, 13, 15, 26, 28, 50, 56, 88, 94, 127, 159, 356, 480, 567, 689, 699, 780, 850, 956, 995]
