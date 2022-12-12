@@ -2,16 +2,16 @@ from typing import Optional, List
 
 """
 Ternary Search Algorithm
-https://en.wikipedia.org/wiki/Binary_search_algorithm
+
 * Algorithm
 
-* Binary Search Complexity
+* Ternary Search Complexity
     Time Complexities
         Best case complexity: O(1)
         Average case complexity: O(log n)
         Worst case complexity: O(log n)
     Space Complexity
-        The space complexity of the binary search is O(1).
+        The space complexity of the ternary search is O(1).
 """
 
 

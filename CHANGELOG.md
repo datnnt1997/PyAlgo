@@ -7,3 +7,7 @@
 - [ ] Ternary Search
 - [ ] Interpolation Search
 - [ ] Exponential Search
+
+### Sort
+
+- [X] Counting Sort 
