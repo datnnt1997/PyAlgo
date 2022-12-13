@@ -41,7 +41,6 @@ def activityNotifications(expenditure, d):
             if expenditure[i + 1] >= twice_median:
                 count += 1
             count_array[expenditure[i - d + 1]] -= 1
-
     return count
 
 

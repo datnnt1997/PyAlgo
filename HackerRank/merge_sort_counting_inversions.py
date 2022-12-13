@@ -13,38 +13,50 @@ import sys
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
-def merge_sort(arr):
+
+def merge_sort(arr, count):
     if len(arr) > 1:
         mid = len(arr) // 2
 
         left = arr[:mid]
 
-        right = arr[mid+1:]
+        right = arr[mid:]
 
-        merge_sort(left)
+        count = merge_sort(left, count)
 
-        merge_sort(right)
+        count = merge_sort(right, count)
 
-        i = j = len(left)
+        l_idx = r_idx = k = 0
 
-        while i
+        while l_idx < len(left) and r_idx < len(right):
+            if left[l_idx] > right[r_idx]:
+                arr[k] = right[r_idx]
+                r_idx += 1
+                count += mid - l_idx
+            else:
+                arr[k] = left[l_idx]
+                l_idx += 1
+            k += 1
+
+        while l_idx < len(left):
+            arr[k] = left[l_idx]
+            l_idx += 1
+            k += 1
+
+        while r_idx < len(right):
+            arr[k] = right[r_idx]
+            r_idx += 1
+            k += 1
+    return count
 
 
 def countInversions(arr):
-    # Write your code here
+    return merge_sort(arr, count = 0)
+
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    arr = [7, 5, 3, 1]
 
-    t = int(input().strip())
+    print(countInversions(arr))
 
-    for t_itr in range(t):
-        n = int(input().strip())
-
-        arr = list(map(int, input().rstrip().split()))
-
-        result = countInversions(arr)
-
-        fptr.write(str(result) + '\n')
-
-    fptr.close()
+    print(arr)

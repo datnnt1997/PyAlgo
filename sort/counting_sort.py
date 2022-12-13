@@ -2,19 +2,19 @@ from typing import List
 
 
 """
-Ternary Search Algorithm
-https://en.wikipedia.org/wiki/Binary_search_algorithm
+Counting Sort Algorithm
+https://en.wikipedia.org/wiki/Counting_sort
+
 * Algorithm
 
-* Counting Search Complexity
+* Counting Sort Complexity
     Time Complexities
         Best case complexity: O(n+k)
         Average case complexity: O(n+k)
         Worst case complexity: O(n+k)
     Space Complexity
-        The space complexity of the counting sot is O(max).
+        The space complexity of the counting sort is O(max).
 """
-
 
 def counting_sort(array: List[int]):
     size = max(array)
