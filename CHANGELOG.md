@@ -10,4 +10,10 @@
 
 ### Sort
 
+- [X] Bubble Sort 
+- [X] Insertion Sort
+- [ ] Selection Sort
 - [X] Counting Sort 
+- [X] Merge Sort
+- [ ] Tim Sort
+- [ ] Quick Sort

@@ -17,21 +17,20 @@ import sys
 
 def pairs(k, arr):
     # Write your code here
+    hash_table = {}
+    count = 0
+    for a in arr:
+        if a - k in hash_table:
+            count += 1
+        if a + k in hash_table:
+            count += 1
+        hash_table[a] = a
+    return count
 
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    first_multiple_input = input().rstrip().split()
+    k = 2
+    arr = [1, 5, 3, 4, 2]
 
-    n = int(first_multiple_input[0])
-
-    k = int(first_multiple_input[1])
-
-    arr = list(map(int, input().rstrip().split()))
-
-    result = pairs(k, arr)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+    print(pairs(k, arr))
